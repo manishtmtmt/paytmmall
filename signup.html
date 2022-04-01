@@ -290,6 +290,8 @@
         if(userObj.password == userObj.confirmPass){
             userData.push(userObj);
             localStorage.setItem("userCreds", JSON.stringify(userData));
+            alert("Signup completed, Go to login page")
+            window.location.href = "login.html"
         }else{
             alert("Password and Confirm Password should be same");
         } 
