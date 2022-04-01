@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="central.css">
+    
+</head>
+<body>
+    <div id="container">
+        <div id="leftbox">
+            <div id="topleft">
+                <div>
+                <div class="deals">
+                    <a href="deals for you"> < Deals For you</a>
+                    <br>
+                    <a href="fashion"> < Fashion</a>
+                </div>
+                <div class="apparels">Apparels</div>
+                <hr>
+                </div>
+            </div>
+            <div id="bottomleft">
+                <div class="sliderbox">
+                    <input type="range" min="0" max="10000" value="0" id="slider">
+                </div>
+                <div>
+                    <h3>Price</h3>
+                </div>
+                <div></div>
+                <div class="pricing" >
+                    <input placeholder="Min" value="" type="number" id="minvalue" onchange="filterByprice()">
+                    <h3>to</h3>
+                    <input placeholder="Max" value="" type="number" id="maxvalue">
+                </div>
+                <hr>
+                <div class="branding">
+                    <h3>Brand</h3></div>
+                <div class="checkbrand">
+                    <input type="checkbox">
+                    <label for="filter0">
+                    <span class="check"></span>
+                    <span class="labelname">Central</span>
+                    <span class="productcount"></span>
+
+                </label>
+                </div>
+
+            </div>
+        </div>
+        <div id="rightbox">
+            <div id="topright">
+                <div id="topbar">
+                    <h1>Central Gift Cards</h1>
+                    <span class="h1span"></span>
+                </div>
+                <div  id="sortit"><span>Sort By</span>
+                    <select id="selection" onchange="sortByCategory()"> 
+                    <option value="new" id="newest">New</option>
+                    <option value="popular" id="popu">Popular</option>
+                    <option value="lth" id="lth">Low To High Price</option>
+                    <option value="htl" id="htl">High To Low Price</option>
+                </select></div>
+            </div>
+            <hr>
+            <div id="product">
+             
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="central.js">
+
+
+</script>
