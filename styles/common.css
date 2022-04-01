@@ -78,6 +78,10 @@
     width: 60%;
 }
 
+#search:focus {
+    outline: none;
+}
+
 #magnifying {
     float: right;
 }
