@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .container{
+            display: flex;
+            width: 70%;
+            height: 800px;
+            margin:auto;
+            background-image: url("https://cutewallpaper.org/21/sky-blue-abstract-background/beautiful-blue-pale-sky-smooth-pastel-abstract-background-.jpg");
+            background-repeat: no-repeat;
+            background-size: cover; 
+        }
+        h1{
+            text-align: center;
+            color:#fafafa;
+            padding-top:20px;
+            font-family: sans-serif;
+        }
+        .color{
+            background-image:url("https://lumestrategies.com/wp-content/uploads/2022/01/LUM-infographic-business-continuity-vs-traditional-backup-0111.jpg");
+            padding-bottom: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        p{
+            text-align: center;
+            font-size:20px;
+            color:#fafafa;
+        }
+        .container>div{
+            display:flex;
+            flex-wrap: wrap;
+            width: 90%;
+            height: 800px;
+            margin: 10px;
+            margin-top:-20px;
+            justify-content: center;
+            align-items: center;
+        }
+        div>img{
+            width:50%;
+            height:290px;
+            background-color: yellow;
+        }
+
+        .box{
+            background: white;
+            width:100%;
+            padding:25px;
+            margin:50px auto 0;
+            /* border-top: 5px solid blue; */
+            box-shadow:0 0 7px 5px rgba(0, 0, 0, 0.5)
+        }
+        .box h2{
+            font-size: 24px;
+            line-height: 24px;
+            padding: 10px;
+            text-align: center;
+        }
+        .input-name{
+            width: 90%;
+            position: relative;
+            margin: 30px auto;
+            
+        }
+        .lock{
+            padding: 8px 11px;
+        }
+        .name{
+            width:89%;
+            padding:8px 0 8px 40px;
+        }
+        .text-name{
+            width:89%;
+            padding:8px 0 8px 40px;
+        } 
+        .input-name i{
+            position:absolute;
+            font-size:18px;
+            color: blue;
+            border-right: 1px solid #cccccc;
+        }
+        .email{
+            padding: 8px;
+        }
+        .num{
+            padding: 8px 11px;
+        }
+
+        .text-name, .name{
+            border: 1px solid #cccccc;
+            outline: none;
+            /* -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -ms-transition: all 0.30s ease-in-out; */
+            transition: all 0.30s ease-in-out;
+
+        }
+        .text-name:hover, .name:hover{
+            background-color: #fafafa;
+        }
+
+        .text-name:focus, .name:focus{
+            border: 1px solid blue;
+        }
+
+
+        .check{
+            margin-right: 15px;
+            position: relative;
+            font-size: 18px;
+        }
+
+    .check::before{
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        margin-right: 8px;
+        vertical-align: -2px;
+        border: 2px solid #cccccc;
+        padding: 2.5px;
+        background-color: transparent;
+        background-clip: content-box;
+        transition: all 0.2s ease;
+    }
+
+    .check::after{
+        border-right: 2px solid black;
+        border-top: 2px solid black;
+        content:"";
+        height:20px;
+        left:2px;
+        position: absolute;
+        top: 7px;
+        transform: scaleX(-1) rotate(135deg);
+        transform-origin: left top;
+        width: 7px;
+        display:none;
+    }
+    .check-button{
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .check-button:hover + .check::before{
+        border-color: blue;
+    }
+    .check-button:checked + .check::before{
+        border-color: green;
+    }
+    .check-button:checked + .check::after{
+        -moz-animation: check 0.8s ease 0s running;
+        -webkit-animation: check 0.8s ease 0s running ;
+        animation: check 0.8s ease 0s running;
+        display: block;
+        width: 7px;
+        height: 20px;
+        border-color: green;
+    }
+    
+    @keyframes check{
+        0%{height: 0; width: 0;}
+        25%{height: 0; width: 7px;}
+        50%{height: 20px; width: 7px;}
+    }
+
+    .button{
+        display: block;
+        background-color: blue;
+        color: white;
+        height: 35px;
+        line-height: 35px;
+        border: none;
+        outline:none;
+        font-size: 18px;
+        cursor:pointer;
+        margin-bottom: 10px;
+        align-content: center;
+        border-radius: 4px;
+        
+    }
+    a{
+        color:inherit;
+        text-decoration: inherit;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    .button:hover{
+        background: green;
+    }
+
+    @media (max-width: 480px){
+        .box{
+            width: 100%;
+            padding: 5px
+        }
+        .input-name{
+            margin-bottom: -10px;
+        }
+        .form-box{
+            width: 100%
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="color">
+    <h1>Welcome to Paytm Mall</h1>
+    <p>An E-commerce and payment platform for consumers</p>
+    <div class="container">
+        <div><img src="https://www.hrkatha.com/wp-content/uploads/paytm.jpg"/></div>
+        <div>
+            
+            <div class="box">
+                <h2>Create an account</h2>
+                <div class="form-box">
+                    <form>
+
+                        <div class="input-name">
+                            <i class="fa fa-user lock"></i>
+                            <input type="text" id="full_name" placeholder="Full Name" class="text-name">
+                        </div>
+
+                        <div class="input-name">
+                            <i class="fa fa-envelope email"></i>
+                            <input type="email" id="email" placeholder="Email" class="text-name">
+                        </div>
+
+                        <div class="input-name">
+                            <i class="fa fa-mobile num"></i>
+                            <input type="number" id="number" placeholder="Mobile Number" class="text-name">
+                        </div>
+
+                        <div class="input-name">
+                            <i class="fa fa-lock lock"></i>
+                            <input type="password" id="pass" placeholder="Password" class="text-name">
+                        </div>
+
+                        <div class="input-name">
+                            <i class="fa fa-lock lock"></i>
+                            <input type="password" id="co_pass" placeholder="Confirm Password" class="text-name">
+                        </div>
+                        <div class="input-name">
+                            <input type="checkbox" id="abc" class="check-button">
+                            <label for="abc" class="check">I accept the terms and conditions</label>
+                        </div>
+
+                        <div class="input-name">
+                            <input type="submit" class="button" value="Sign Up">
+                            <a href="login.html">Already a member? Login here</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    
+    document.querySelector("form").addEventListener("submit", signUpFunc);
+    var userData = JSON.parse(localStorage.getItem("userCreds")) || [];
+    function signUpFunc(){
+        event.preventDefault();
+        var userObj = {
+            fname: document.querySelector("#full_name").value,
+            email: document.querySelector("#email").value,
+            mobile: document.querySelector("#number").value,
+            password: document.querySelector("#pass").value,
+            confirmPass: document.querySelector("#co_pass").value,
+        }
+        if(userObj.password == userObj.confirmPass){
+            userData.push(userObj);
+            localStorage.setItem("userCreds", JSON.stringify(userData));
+        }else{
+            alert("Password and Confirm Password should be same");
+        } 
+       
+    }
+
+</script>
+
+</html>
