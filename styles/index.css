@@ -55,6 +55,11 @@
     border-radius: 50%;
 }
 
+.carousel-control-prev, .carousel-control-next {
+    width: 35px;
+
+}
+
 .carousel-control-prev-icon {
     background-color: black;
     position: absolute;

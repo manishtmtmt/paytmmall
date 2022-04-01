@@ -81,6 +81,11 @@
 #magnifying {
     float: right;
 }
+
+#order, #cart, #account {
+    color: black;
+    text-decoration: none;
+}
 /*navbar end*/
 
 /* footer start*/
