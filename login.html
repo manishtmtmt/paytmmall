@@ -50,7 +50,7 @@
             }
         </style>
     </head>
-    <body class="bg-blue-500">
+    <body class="bg-blue-500 overflow-hidden">
         <div class="container 2xl:mx-56 2xl:my-32 xl:mx-20 xl:my-16 lg:mx-10">
             <div class="grid grid-cols-12 gap-4">
                 <div class="col-span-12 lg:col-span-4">
@@ -68,7 +68,7 @@
                                       </div>  
                                       <div class="mb-5">
                                         <label class="block text-gray-700 text-md font-light mb-2" for="password">Password</label>
-                                        <input type="text" class="shadow appreance-none border rounded w-full p-3  text-sm" id="password">
+                                        <input type="password" class="shadow appreance-none border rounded w-full p-3  text-sm" id="password">
                                       </div>
                                       <div class="grid grid-cols-2">
                                           <div>    
@@ -80,10 +80,7 @@
                                           </div>
                                       </div>
                                       <div class="my-7">
-                                          <!-- <button class="w-full py-3 text-white bg-blue-500 text-xl font-bold">
-                                              Login -->
-                                          <!-- </button> -->
-                                          <input type="submit" value="Login" class="w-full py-3 text-white bg-blue-500 text-xl font-bold">
+                                          <input type="submit" value="Login" class="w-full py-3 text-white bg-blue-500 text-xl font-bold cursor-pointer rounded-md">
                                       </div>
                                 </form>
                                     <div class="extra-login">
@@ -130,16 +127,21 @@
         var regdUsers = JSON.parse(localStorage.getItem("userCreds"));
 
         function loginFunc(){
+            let flag = false;
             event.preventDefault();
             var enteredEmail = document.querySelector("#email").value;
             var enteredPassword = document.querySelector("#password").value;
 
             for(var i=0;i<regdUsers.length;i++){
                 if(regdUsers[i].email == enteredEmail && regdUsers[i].password == enteredPassword){
-                    window.location.href="index.html"
+                    flag=true
                     break;
-                }
-                alert("Login Failed")
+                } 
+            }
+            if(flag){
+                window.location.href="index.html"
+            }else{
+                alert("Login Failed");
             }
             
         }
